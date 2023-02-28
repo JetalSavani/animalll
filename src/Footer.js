@@ -1,0 +1,194 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+export default function Footer() {
+  return (
+    <div>
+<>
+  {/* Start Footer Area */}
+  <footer className="footer-area">
+    <div className="container-fluid">
+      {/* Start Subscribe Area */}
+      {/* <section className="subscribe-area">
+        <div className="container">
+          <div className="subscribe-content">
+            <h2>Subscribe to our newsleter</h2>
+            <form className="newsletter-form" data-bs-toggle="validator">
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="input-newsletter"
+                  placeholder="First Name"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="input-newsletter"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="input-newsletter"
+                  placeholder="Email Address*"
+                  name="EMAIL"
+                  required=""
+                  autoComplete="off"
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Submit <i className="icofont-arrow-right" />
+              </button>
+              <div id="validator-newsletter" className="form-result" />
+            </form>
+          </div>
+        </div>
+        <div className="horse-box5">
+          <img src="assets/img/2.png" alt="horse" />
+        </div>
+        <div className="horse-box6">
+          <img src="assets/img/3.png" alt="horse" />
+        </div>
+      </section> */}
+      {/* End Subscribe Area */}
+    </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-3 col-md-6">
+          <div className="single-footer-widget">
+            <div className="logo">
+              <Link to="#">
+                <img src="assets/img/animalll_logo.jpg" style={{width:"150px"}} alt="logo" />
+              </Link>
+            </div>
+            <p>
+            Look deep into nature, and then you will understand
+                    everything better.
+            </p>
+            <ul className="social">
+              <li>
+                <Link to="#" target="_blank">
+                  <i className="icofont-facebook" />
+                </Link>
+              </li>
+              <li>
+                <Link to="#" target="_blank">
+                  <i className="icofont-twitter" />
+                </Link>
+              </li>
+              <li>
+                <Link to="#" target="_blank">
+                  <i className="icofont-instagram" />
+                </Link>
+              </li>
+              <li>
+                <Link to="#" target="_blank">
+                  <i className="icofont-youtube" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6">
+          <div className="single-footer-widget">
+            <h3>Services</h3>
+            <ul className="services-list">
+              <li>
+                <Link to="#">Transportation</Link>
+              </li>
+              <li>
+                <Link to="#">Veterinary</Link>
+              </li>
+              <li>
+                <Link to="#">Insaurance</Link>
+              </li>
+              <li>
+                <Link to="#">Animal Accessories</Link>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6">
+          <div className="single-footer-widget">
+            <h3>Contacts</h3>
+            <ul className="contact-info">
+              <li>
+                <span>Address:</span> Sutex Bank of Computer Applications And Science
+              </li>
+              <li>
+                <span>Email:</span>{" "}
+                <Link to="#">
+                  <span
+                    className="__cf_email__"
+                    data-cfemail="b4c7d1d9d1dac0d5d8f4d3d9d5ddd89ad7dbd9"
+                  >
+                  jetalsavani55@gmail.com
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <span>Phone:</span> <Link to="#">+91 8200859090</Link>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6">
+          <div className="single-footer-widget">
+            <h3>Working Hours</h3>
+            <ul className="working-hours">
+              <li>
+                <span>Monday To Saturday</span> &nbsp; 8AM - 6AM
+              </li>
+              {/* <li>
+                <span>Tuesday:</span> 8AM - 6AM
+              </li>
+              <li>
+                <span>Wednesday:</span> 8AM - 6AM
+              </li>
+              <li>
+                <span>Thursday - Friday:</span> 8AM - 6AM
+              </li> */}
+              <li>
+                <span>Sunday:</span> Closed
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="copyright-area">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-6 col-md-6">
+            <p>
+              <i className="icofont-copyright" /> Copyright Animalll. All Rights
+              Reserved
+            </p>
+          </div>
+          <div className="col-lg-6 col-md-6">
+            <ul>
+              <li>
+                <Link to="#">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="#">Terms &amp; Conditions</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {/* End Footer Area */}
+</>
+
+
+
+
+    </div>
+  )
+}
