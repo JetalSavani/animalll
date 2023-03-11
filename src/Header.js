@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { json, Link, useNavigate } from "react-router-dom";
+import avtar from "./images/avtar.png"
 
 export default function Header() {
+  const navigate = useNavigate()
+  let userData = JSON.parse(localStorage.getItem("userData"));
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <>
@@ -15,34 +22,36 @@ export default function Header() {
   </div> */}
           {/* End Preloader Area */}
           {/* Start Navbar Area */}
-          <div className="navbar-area">
-            <div className="semental-mobile-nav">
-              <div className="logo">
-                {/* <Link href="index-4.html"> */}
-                <img
-                  src="assets/img/animalll_logo.jpg"
-                  style={{ width: "120px" }}
-                  alt="logo"
-                />
-                {/*</Link> */}
+          <header>
+
+            <div className="navbar-area">
+              <div className="semental-mobile-nav" style={{ position: "relative", zIndex: "999" }}>
+                <div className="logo">
+                  {/* <Link href="index-4.html"> */}
+                  <img
+                    src="assets/img/main-logo.png"
+                    style={{ width: "60px" }}
+                    alt="logo"
+                  />
+                  {/*</Link> */}
+                </div>
               </div>
-            </div>
-            <div className="semental-nav">
-              <div className="container">
-                <nav className="navbar navbar-expand-md navbar-light">
-                  <Link className="navbar-brand" to="/">
-                    <img
-                      src="assets/img/animalll_logo.jpg"
-                      style={{ width: "120px" }}
-                      alt="logo"
-                    />
-                  </Link>
-                  <div
-                    className="collapse navbar-collapse mean-menu"
-                    id="navbarSupportedContent"
-                  >
-                    <ul className="navbar-nav">
-                      {/* <li className="nav-item">
+              <div className="semental-nav">
+                <div className="container">
+                  <nav className="navbar navbar-expand-md navbar-light">
+                    <Link className="navbar-brand" to="/">
+                      <img
+                        src="assets/img/main-logo.png"
+                        style={{ width: "70px" }}
+                        alt="logo"
+                      />
+                    </Link>
+                    <div
+                      className="collapse navbar-collapse mean-menu"
+                      id="navbarSupportedContent"
+                    >
+                      <ul className="navbar-nav align-items-center">
+                        {/* <li className="nav-item">
                         <Link href="#" className="nav-link active">
                           Home <i className="icofont-simple-down" />
                        </Link>
@@ -77,10 +86,10 @@ export default function Header() {
                               Horse Riding School
                            </Link>
                           </li> */}
-                      {/* </ul>
+                        {/* </ul>
                       </li> */}
 
-                      {/* <li className="nav-item">
+                        {/* <li className="nav-item">
                         <Link href="#" className="nav-link">
                           About Us <i className="icofont-simple-down" />
                        </Link>
@@ -102,7 +111,7 @@ export default function Header() {
                           </li>
                         </ul>
                       </li> */}
-                      {/* <li className="nav-item">
+                        {/* <li className="nav-item">
                         <Link href="#" className="nav-link">
                           Courses <i className="icofont-simple-down" />
                        </Link>
@@ -119,7 +128,7 @@ export default function Header() {
                           </li>
                         </ul>
                       </li> */}
-                      {/* <li className="nav-item">
+                        {/* <li className="nav-item">
                         <Link href="#" className="nav-link">
                           Stallions <i className="icofont-simple-down" />
                        </Link>
@@ -139,7 +148,7 @@ export default function Header() {
                           </li>
                         </ul>
                       </li> */}
-                      {/* <li className="nav-item">
+                        {/* <li className="nav-item">
                         <Link href="#" className="nav-link">
                           Pages <i className="icofont-simple-down" />
                        </Link>
@@ -274,82 +283,210 @@ export default function Header() {
                         </ul>
                       </li> */}
 
-                      <li className="nav-item">
-                        <Link to="/" className="nav-link">
-                          Home
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to="/services" className="nav-link">
-                          Services <i className="icofont-simple-down" />
-                        </Link>
-                        <ul className="dropdown-menu">
-                          <li className="nav-item">
-                            <Link to="/transportation" className="nav-link">
-                              Transportation
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link to="/veterinary" className="nav-link">
-                              Veterinary
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link
-                              to="/insaurance"
-                              className="nav-link"
-                            >
-                              Insaurance
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link
-                              to="/animal-accessories"
-                              className="nav-link"
-                            >
-                              Animal Accessories
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
+                        <li className="nav-item">
+                          <Link to="/" className="nav-link">
+                            Home
+                          </Link>
+                        </li>
 
-                      <li className="nav-item">
-                        <Link to="/blog" className="nav-link">
-                          Blog
-                        </Link>
-                      </li>
+                        <li className="nav-item">
+                          <Link to="#" className="nav-link">
+                            Products <i className="icofont-simple-down" />
+                          </Link>
 
-                      <li className="nav-item">
-                        <Link to="/product" className="nav-link">
-                          Product
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to="/contact" className="nav-link">
-                          Contact
-                        </Link>
-                      </li>
-                      <li className="nav-item">
+                          <ul className="dropdown-menu">
+                            <li className="nav-item">
+                              <Link
+                                to="/allproduct"
+                                className="nav-link"
+                              >
+                                All Products
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to="/cow" className="nav-link">
+                                Cow
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to="/buffalo" className="nav-link">
+                                Buffalo
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link
+                                to="/ox"
+                                className="nav-link"
+                              >
+                                Ox
+                              </Link>
+                            </li>
+
+                          </ul>
+                        </li>
+
+
+
+
+                        <li className="nav-item">
+                          <Link to="/blog" className="nav-link">
+                            Blog
+                          </Link>
+                        </li>
+
+                        <li className="nav-item">
+                          <Link to="#" className="nav-link">
+                            Services <i className="icofont-simple-down" />
+                          </Link>
+                          <ul className="dropdown-menu">
+                            <li className="nav-item">
+                              <Link to="/transportation" className="nav-link">
+                                Transportation
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to="/veterinary" className="nav-link">
+                                Veterinary
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link
+                                to="/insurance"
+                                className="nav-link"
+                              >
+                                Insurance
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link
+                                to="/animalaccessories"
+                                className="nav-link"
+                              >
+                                Animal Accessories
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li className="nav-item">
+                          <Link to="/contact" className="nav-link">
+                            Contact
+                          </Link>
+                        </li>
+
+                        <li className="nav-item">
+                          <Link to="/news" className="nav-link">
+                            News
+                          </Link>
+                        </li>
+
+
+
+
+                        {/* <li className="nav-item">
                         <Link to="/about" className="nav-link">
                           About
                         </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to="/register" className="nav-link">
-                          Register
+                      </li> */}
+                        {!userData && <li className="nav-item">
+                          <Link to="/register" className="nav-link">
+                            Register
+                          </Link>
+                        </li>}
+                        {userData && <li className="nav-item">
+                          <Link to="#" className="nav-link">
+                            <img src={avtar} alt="" width={60} height={60} />
+                          </Link>
+                          <ul className="dropdown-menu">
+                            <li className="nav-item">
+                              <Link to="/profile" className="nav-link">
+                                My Profile
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to="/editprofile" className="nav-link">
+                                Edit Profile
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link
+                                to="/rechangepassword"
+                                className="nav-link"
+                              >
+                                Change Password
+                              </Link>
+                            </li>
+                            {userData?.role === "640a11bf7387cfb8e11df200" ? <li className="nav-item">
+                              <Link
+                                to="/vendor"
+                                className="nav-link"
+                              >
+                                Add Product
+                              </Link>
+                            </li> : <li className="nav-item">
+                              <Link
+                                to="/vendor"
+                                className="nav-link"
+                              >
+                                Vendor
+                              </Link>
+                            </li>}
+                            <li className="nav-item" onClick={() => { localStorage.clear(); navigate("/login") }}>
+                              <Link
+                                to="/vendor"
+                                className="nav-link"
+                              >
+                                Logout
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>}
+                      </ul>
+                      {!userData ? <div className="others-options">
+                        <Link to="/login" className="btn btn-primary">
+                          Login <i className="icofont-simple-right" />
                         </Link>
-                      </li>
-                    </ul>
-                    <div className="others-options">
-                      <Link to="/login" className="btn btn-primary">
-                        Login <i className="icofont-simple-right" />
-                      </Link>
+                      </div> : ""}
+
+                      {/* {userData && <li className="nav-item">
+                        <Link to="#" className="nav-link">
+                          <img src={avtar} alt="" width={60} height={60} />
+                        </Link>
+                        <ul className="dropdown-menu">
+                          <li className="nav-item">
+                            <Link to="/profile" className="nav-link">
+                              My Profile
+                            </Link>
+                          </li>
+                          <li className="nav-item">
+                            <Link to="/editprofile" className="nav-link">
+                              Edit Profile
+                            </Link>
+                          </li>
+                          <li className="nav-item">
+                            <Link
+                              to="/rechangepassword"
+                              className="nav-link"
+                            >
+                              Change Password
+                            </Link>
+                          </li>
+                          <li className="nav-item">
+                            <Link
+                              to="/vendor"
+                              className="nav-link"
+                            >
+                              Vendor
+                            </Link>
+                          </li>
+                        </ul>
+                      </li>} */}
                     </div>
-                  </div>
-                </nav>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
+          </header>
           {/* End Navbar Area */}
         </>
       </>

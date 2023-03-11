@@ -1,443 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+import HomeBanner from "./Home/HomeBanner";
 
 export default function Home() {
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div>
       <>
         {/* Start Main Banner */}
-        <div className="slider-area">
-          <div
-            id="rev_slider_1078_1_wrapper"
-            className="rev_slider_wrapper fullwidthbanner-container"
-            data-alias="classic4export"
-            data-source="gallery"
-            style={{
-              margin: "0px auto",
-              backgroundColor: "transparent",
-              padding: 0,
-              marginTop: 0,
-              marginBottom: 0,
-            }}
-          >
-            {/* START REVOLUTION SLIDER 5.4.1 fullwidth mode */}
-            <div
-              id="rev_slider_1078_1"
-              className="rev_slider fullwidthabanner"
-              style={{ display: "none" }}
-              data-version="5.4.1"
-            >
-              <ul>
-                {/* SLIDE  */}
-                <li
-                  data-index="rs-3045"
-                  data-transition="zoomout"
-                  data-slotamount="default"
-                  data-hideafterloop={0}
-                  data-hideslideonmobile="off"
-                  data-easein="Power4.easeInOut"
-                  data-easeout="Power4.easeInOut"
-                  data-masterspeed={2000}
-                  data-thumb="assets/img/main-banner5.jpg"
-                  data-rotate={0}
-                  data-fstransition="fade"
-                  data-fsmasterspeed={1500}
-                  data-fsslotamount={7}
-                  data-saveperformance="off"
-                  data-title="Intro"
-                  data-param1=""
-                  data-param2=""
-                  data-param3=""
-                  data-param4=""
-                  data-param5=""
-                  data-param6=""
-                  data-param7=""
-                  data-param8=""
-                  data-param9=""
-                  data-param10=""
-                  data-description=""
-                >
-                  {/* MAIN IMAGE */}
-                  <img
-                    src="assets/img/main-banner5.jpg"
-                    alt=""
-                    data-bgposition="center center"
-                    data-kenburns="on"
-                    data-duration={10000}
-                    data-ease="Linear.easeNone"
-                    data-scalestart={100}
-                    data-scaleend={120}
-                    data-rotatestart={0}
-                    data-rotateend={0}
-                    data-offsetstart="0 -500"
-                    data-offsetend="0 500"
-                    data-bgparallax={10}
-                    className="rev-slidebg"
-                    data-no-retina=""
-                  />
-                  {/* LAYERS */}
-                  {/* LAYER NR. 1 */}
-                  <div
-                    className="tp-caption NotGeneric-Title tp-resizeme"
-                    id="slide-3045-layer-1"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['-85','-60','-35','-55']"
-                    data-fontsize="['55','55','28','28']"
-                    data-lineheight="['70','70','50','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 5,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    Welcome to Animalll
-                  </div>
-                  {/* LAYER NR. 2 */}
-                  <div
-                    className="tp-caption NotGeneric-SubTitle tp-resizeme"
-                    id="slide-3045-layer-4"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['3','55','45','20']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 6,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    The domestication of animals is the mutual relationship
-                    between non-human animals and the humans who have
-                    <br /> influence on their care and reproduction.
-                  </div>
-                  {/* LAYER NR. 3 */}
-                  <div
-                    className="tp-caption NotGeneric-btn tp-resizeme"
-                    id="slide-3045-layer-8"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['90','145','145','120']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 7,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                      cursor: "default",
-                    }}
-                  >
-                    <Link to="/" className="btn btn-primary">
-                      View Our Products
-                    </Link>
-                  </div>
-                </li>
-                {/* SLIDE  */}
-                <li
-                  data-index="rs-3046"
-                  data-transition="fadetotopfadefrombottom"
-                  data-slotamount="default"
-                  data-hideafterloop={0}
-                  data-hideslideonmobile="off"
-                  data-easein="Power3.easeInOut"
-                  data-easeout="Power3.easeInOut"
-                  data-masterspeed={1500}
-                  data-thumb="assets/img/main-banner6.jpg"
-                  data-rotate={0}
-                  data-saveperformance="off"
-                  data-title="Parallax"
-                  data-param1=""
-                  data-param2=""
-                  data-param3=""
-                  data-param4=""
-                  data-param5=""
-                  data-param6=""
-                  data-param7=""
-                  data-param8=""
-                  data-param9=""
-                  data-param10=""
-                  data-description=""
-                >
-                  {/* MAIN IMAGE */}
-                  <img
-                    src="assets/img/main-banner6.jpg"
-                    alt=""
-                    data-bgposition="center center"
-                    data-bgfit="cover"
-                    data-bgrepeat="no-repeat"
-                    data-bgparallax={10}
-                    className="rev-slidebg"
-                    data-no-retina=""
-                  />
-                  {/* LAYERS */}
-                  {/* LAYER NR. 1 */}
-                  <div
-                    className="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-3"
-                    id="slide-3046-layer-1"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['-85','-60','-35','-55']"
-                    data-fontsize="['55','55','28','28']"
-                    data-lineheight="['70','70','50','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[10,10,10,10]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 8,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    Next To The Nature
-                  </div>
-                  {/* LAYER NR. 2 */}
-                  <div
-                    className="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-2"
-                    id="slide-3046-layer-4"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['3','55','45','20']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 9,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    Look deep into nature, and then you will understand
-                    everything better.
-                  </div>
-                  {/* LAYER NR. 3 */}
-                  <div
-                    className="tp-caption NotGeneric-btn tp-resizeme rs-parallaxlevel-2"
-                    id="slide-3045-layer-8"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['90','145','145','120']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 7,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                      cursor: "default",
-                    }}
-                  >
-                    <Link to="#" className="btn btn-primary">
-                      View Our Products
-                    </Link>
-                  </div>
-                </li>
-                {/* SLIDE  */}
-                <li
-                  data-index="rs-3049"
-                  data-transition="zoomin"
-                  data-slotamount={7}
-                  data-hideafterloop={0}
-                  data-hideslideonmobile="off"
-                  data-easein="Power4.easeInOut"
-                  data-easeout="Power4.easeInOut"
-                  data-masterspeed={2000}
-                  data-thumb="assets/img/main-banner7.jpg"
-                  data-rotate={0}
-                  data-saveperformance="off"
-                  data-title="Slide 3"
-                  data-param1=""
-                  data-param2=""
-                  data-param3=""
-                  data-param4=""
-                  data-param5=""
-                  data-param6=""
-                  data-param7=""
-                  data-param8=""
-                  data-param9=""
-                  data-param10=""
-                  data-description=""
-                >
-                  {/* MAIN IMAGE */}
-                  <img
-                    src="assets/img/main-banner7.jpg"
-                    alt=""
-                    data-bgposition="center center"
-                    data-kenburns="on"
-                    data-duration={10000}
-                    data-ease="Linear.easeNone"
-                    data-scalestart={100}
-                    data-scaleend={120}
-                    data-rotatestart={0}
-                    data-rotateend={0}
-                    data-offsetstart="0 -500"
-                    data-offsetend="0 500"
-                    data-bgparallax={10}
-                    className="rev-slidebg"
-                    data-no-retina=""
-                  />
-                  {/* LAYERS */}
-                  {/* LAYER NR. 1 */}
-                  <div
-                    className="tp-caption NotGeneric-Title tp-resizeme"
-                    id="slide-3049-layer-1"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['-100','-60','-45','-75']"
-                    data-fontsize="['55','55','28','30']"
-                    data-lineheight="['70','70','50','50']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"x:[-105%];z:0;rX:0deg;rY:0deg;rZ:-90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.1,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[10,10,10,10]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 22,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    Passionate,Farming Future in
-                    <br /> Animal
-                  </div>
-                  {/* LAYER NR. 2 */}
-                  <div
-                    className="tp-caption NotGeneric-SubTitle tp-resizeme"
-                    id="slide-3049-layer-4"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['28','55','45','25']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 23,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                    }}
-                  >
-                    Farming for the future means governments, investors, and
-                    farmers themselves must come together to change
-                    <br /> the way food is grown across the world.
-                  </div>
-                  {/* LAYER NR. 3 */}
-                  <div
-                    className="tp-caption NotGeneric-btn tp-resizeme"
-                    id="slide-3045-layer-8"
-                    data-x="['center','center','center','center']"
-                    data-hoffset="['0','0','0','0']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-voffset="['110','145','145','125']"
-                    data-width="none"
-                    data-height="none"
-                    data-whitespace="nowrap"
-                    data-type="text"
-                    data-responsive_offset="on"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                    data-textalign="['center','center','center','center']"
-                    data-paddingtop="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    style={{
-                      zIndex: 7,
-                      whiteSpace: "nowrap",
-                      textTransform: "left",
-                      cursor: "default",
-                    }}
-                  >
-                    <Link to="#" className="btn btn-primary">
-                      View Our Products <i className="icofont-simple-right" />
-                    </Link>
-                  </div>
-                </li>
-              </ul>
-              <div
-                className="tp-bannertimer"
-                style={{
-                  height: 7,
-                  backgroundColor: "rgba(255, 255, 255, 0.25)",
-                }}
-              />
-            </div>
-          </div>
-          {/* END REVOLUTION SLIDER */}
-        </div>
+        <HomeBanner/>
         {/* End Main Banner */}
 
         {/* Start About Area */}
@@ -505,8 +89,8 @@ export default function Home() {
             <div className="section-title">
               <span>Shop</span>
               <h2>Our Products</h2>
-              </div>
-             {/* <div className="section-title">
+            </div>
+            {/* <div className="section-title">
             <h4>Our <span style={{fontSize:"30px", textAlign:"center"}}>Products</span></h4>
             </div> */}
             <div className="about-inner-area">
@@ -522,7 +106,7 @@ export default function Home() {
                     <div className="content">
                       <h3>Buffalo</h3>
                       <p> A buffalo is an Herbivorous animal.</p>
-                      <Link to="#" className="btn btn-primary">
+                      <Link to="/buffalo" className="btn btn-primary">
                         See More <i className="icofont-simple-right" />
                       </Link>
                     </div>
@@ -539,7 +123,7 @@ export default function Home() {
                     <div className="content">
                       <h3>Cows</h3>
                       <p>Everything we do, we do for our cows.</p>
-                      <Link to="#" className="btn btn-primary">
+                      <Link to="/cow" className="btn btn-primary">
                         See More <i className="icofont-simple-right" />
                       </Link>
                     </div>
@@ -556,17 +140,17 @@ export default function Home() {
                     <div className="content">
                       <h3>Ox</h3>
                       <p>An ox is a male offspring of a cow.</p>
-                      <Link to="#" className="btn btn-primary">
+                      <Link to="/ox" className="btn btn-primary">
                         See More <i className="icofont-simple-right" />
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-             
+
             </div>
           </div>
-         
+
         </section>
         {/* End About Area */}
         {/* Start Video Area */}
@@ -577,7 +161,7 @@ export default function Home() {
           <div className="container">
             <div className="video-content">
               <Link
-                to="https://youtu.be/vv-mI-DaeoE"
+                to="https://youtube.com/watch?v=4ZOO3uex1xA&feature=shares"
                 className="video-btn popup-youtube"
               >
                 <i className="icofont-play" />
@@ -663,7 +247,7 @@ export default function Home() {
           </div>
         </section>
         {/* End Gallery Area */}
-        
+
         {/* Start Products Area */}
         {/* <section className="products-area ptb-80">
           <div className="container">
@@ -1097,7 +681,7 @@ export default function Home() {
           </div>
         </div> */}
         {/* End Produts Modal */}
-       
+
         {/* Start Blog Area */}
         <section className="blog-area ptb-80">
           <div className="container">
@@ -1163,7 +747,7 @@ export default function Home() {
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
                     </p>
-                    <Link to="/blog"  className="read-more">
+                    <Link to="/blog" className="read-more">
                       Read More <i className="icofont-simple-right" />
                     </Link>
                   </div>
@@ -1191,7 +775,7 @@ export default function Home() {
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
                     </p>
-                    <Link  to="/blog" ame="read-more">
+                    <Link to="/blog" className="read-more">
                       Read More <i className="icofont-simple-right" />
                     </Link>
                   </div>
@@ -1214,8 +798,20 @@ export default function Home() {
               </p>
             </div>
             <div className="row">
-              <div className="instructor-slides owl-carousel owl-theme">
-                <div className="col-lg-12 col-md-12">
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Pagination, Autoplay]}
+                className="mySwiper"
+              >
+                <SwiperSlide><div className="col-lg-12 col-md-12">
                   <div className="single-instructor">
                     <img src="assets/img/abhi.jpg" alt="instructor" />
                     <div className="instructor-content">
@@ -1247,8 +843,8 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-12 col-md-12">
+                </div></SwiperSlide>
+                <SwiperSlide><div className="col-lg-12 col-md-12">
                   <div className="single-instructor">
                     <img src="assets/img/jetal.jpg" alt="instructor" />
                     <div className="instructor-content">
@@ -1280,10 +876,10 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-12 col-md-12">
+                </div></SwiperSlide>
+                <SwiperSlide><div className="col-lg-12 col-md-12">
                   <div className="single-instructor">
-                    <img src="assets/img/ayush2.jpg" alt="instructor" />
+                    <img src="assets/img/ayush2.jpg" alt="instructor" style={{ height: "560px" }} />
                     <div className="instructor-content">
                       <h3>Ayush Donda</h3>
                       <span>Founder</span>
@@ -1313,8 +909,8 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-12 col-md-12">
+                </div></SwiperSlide>
+                <SwiperSlide><div className="col-lg-12 col-md-12">
                   <div className="single-instructor">
                     <img src="assets/img/yash1.heic" alt="instructor" />
                     <div className="instructor-content">
@@ -1346,41 +942,8 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                </div>
-                {/* <div className="col-lg-12 col-md-12">
-                  <div className="single-instructor">
-                    <img src="assets/img/instructor5.jpg" alt="instructor" />
-                    <div className="instructor-content">
-                      <h3>Lucy Martin</h3>
-                      <span>Trainer</span>
-                    </div>
-                    <div className="social">
-                      <ul>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <i className="icofont-facebook" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <i className="icofont-twitter" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <i className="icofont-instagram" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <i className="icofont-linkedin" />
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
+                </div></SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </section>

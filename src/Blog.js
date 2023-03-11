@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function Blog() {
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
         
@@ -11,18 +16,20 @@ export default function Blog() {
   <div className="page-title-area bg6 jarallax" data-jarallax='{"speed": 0.2}'>
     <div className="container">
       <div className="page-title-content">
-        <h1>Blog Details</h1>
+        <h1>Blog </h1>
         <ul>
           <li>
-            <Link to="#">Home</Link>
+            <Link to="/">Home</Link>
           </li>
-          <li>Blog Details</li>
+          <li>Blog </li>
         </ul>
       </div>
     </div>
   </div>
   {/* End Page Title Area */}
   {/* Start Blog Details Area */}
+
+  
   <section className="blog-details-area ptb-80">
     <div className="container">
       <div className="row">
