@@ -98,7 +98,7 @@ export default function Register() {
             c_password: "",
             phone: null,
           })
-          toast.error(res?.data?.message)
+          toast.success(res?.data?.message)
           navigate("/login")
         }).catch((err) => {
           console.log('err', err)

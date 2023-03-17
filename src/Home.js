@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       <>
         {/* Start Main Banner */}
-        <HomeBanner/>
+        <HomeBanner />
         {/* End Main Banner */}
 
         {/* Start About Area */}

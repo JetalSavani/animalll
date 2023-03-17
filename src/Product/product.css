@@ -100,3 +100,19 @@ input[type="files"] {
   background-color: black;
   color: #fff;
 }
+.single-courses {
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+.btn-view {
+  width: 100%;
+  border: 1.5px solid #2b8f69;
+  color: #2b8f69;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.btn-view:hover {
+  background-color: #2b8f69;
+  border-color: white;
+  color: white;
+}

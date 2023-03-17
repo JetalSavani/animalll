@@ -13,7 +13,7 @@ export default function Insurance() {
         <div className="horse-society-area pt-100 pb-70">
           <div className="container">
             <div className="section-title with-wrap-style">
-              <span>INSURANCE SERVICE</span>
+              {/* <span>INSURANCE SERVICE</span> */}
               <h2>Protect Your Livestock with Cow Insurance Coverage</h2>
             </div>
             <div className="row justify-content-center align-items-center">
@@ -22,7 +22,7 @@ export default function Insurance() {
                   <div className="horse-society-content">
                     <div className="icon-image">
                       <img
-                        src="assets/img/insuranceimage.png"
+                        src="assets/img/insuranceimage.jpg"
                         alt="icon"
                       />
                     </div>
@@ -39,7 +39,7 @@ export default function Insurance() {
                   <div className="horse-society-content">
                     <div className="icon-image">
                       <img
-                        src="assets/img/insuranceimage2.png"
+                        src="assets/img/insuranceimage2.jpg"
                         alt="icon"
                       />
                     </div>
@@ -59,7 +59,7 @@ export default function Insurance() {
                 <div className="horse-society-card">
                   <div className="horse-society-image">
                     <img
-                      src="assets/img/insurancemain2.jpeg"
+                      src="assets/img/insurancemain2.jpg"
                       alt="image"
                       style={{ height: "450px" }}
                     />
@@ -71,7 +71,7 @@ export default function Insurance() {
                   <div className="horse-society-content">
                     <div className="icon-image">
                       <img
-                        src="assets/img/insuranceimage3.png"
+                        src="assets/img/insuranceimage3.jpg"
                         alt="icon"
                       />
                     </div>
@@ -88,7 +88,7 @@ export default function Insurance() {
                   <div className="horse-society-content">
                     <div className="icon-image">
                       <img
-                        src="assets/img/insuranceimage4.png"
+                        src="assets/img/insuranceimage4.jpg"
                         alt="icon"
                       />
                     </div>

@@ -89,7 +89,7 @@ export default function Transportation() {
                       I have exprience of 10 year's in trasportation field.
                     </p>
                     <a href="#" className="read-more-btn">
-                      <i className="icofont-simple-right" /> <span>READ MORE</span>
+                      <i className="icofont-simple-right" /> <span>Book Now</span>
                     </a>
                   </div>
                 </div>

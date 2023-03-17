@@ -1,9 +1,38 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { baseUrl } from '../BaseUrl/BaseUrl'
+import moment from 'moment'
 export default function Singleblog() {
+    const pathName = window.location.pathname
+    console.log('pathName', pathName)
+    let config = {
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem("token")
+        }
+    }
+    const navigate = useNavigate()
+    const [data, setData] = useState({})
+    console.log('data', data)
+    const getProduct = async () => {
+        let blog = []
+        await axios.get(baseUrl + "blog/get-blog", config).then((res) => {
+            console.log('res', res)
+            blog = res?.data?.blog.filter((v) => {
+                if (v?._id === pathName.split('/')[2])
+                    return v
+            })
+            setData(blog[0])
+        }).catch((err) => {
+            console.log('err', err)
+        })
+    }
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    useEffect(() => {
+        getProduct()
+    }, [])
     return (
         <div>
 
@@ -18,7 +47,7 @@ export default function Singleblog() {
                                     <li>
                                         <Link to="/">Home</Link>
                                     </li>
-                                    <li>Blog</li>
+                                    <li>FullBlog</li>
                                 </ul>
                             </div>
                         </div>
@@ -36,74 +65,17 @@ export default function Singleblog() {
                                                     <i className="icofont-user" /> <Link to="#">Animalll</Link>
                                                 </li>
                                                 <li>
-                                                    <i className="icofont-calendar" /> April 08, 2021
+                                                    <i className="icofont-calendar" /> {moment(data?.createdAt).format('LL')}
                                                 </li>
 
                                             </ul>
-                                            <h3>The Most Popular New top Business Apps</h3>
+                                            <h3>{data?.title}</h3>
                                         </div>
                                         <div className="article-img">
                                             <img src="assets/img/blog6.jpg" alt="" />
                                         </div>
                                         <div className="article-content">
-                                            <p>
-                                                It was popularised in the 1960s with the release of Letraset
-                                                sheets containing Lorem Ipsum passages, and more recently with
-                                                desktop publishing software like Aldus PageMaker including
-                                                versions of Lorem Ipsum.
-                                            </p>
-                                            <p>
-                                                Lorem Ipsum has been the industry’s standard dummy text ever
-                                                since the 1500s, when an unknown printer took a galley of type
-                                                and scrambled it to make a type specimen book.
-                                            </p>
-                                            <p>
-                                                It has survived not only five centuries, but also the leap into
-                                                electronic typesetting, remaining essentially unchanged.
-                                            </p>
-                                            <p>
-                                                It was popularised in the 1960s with the release of Letraset
-                                                sheets containing Lorem Ipsum passages, and more recently with
-                                                desktop publishing software like Aldus PageMaker including
-                                                versions of Lorem Ipsum.
-                                            </p>
-                                            <p>
-                                                It is a long established fact that a reader will be distracted
-                                                by the readable content of a page when looking at its layout.
-                                            </p>
-                                            <blockquote className="wp-block-quote">
-                                                <p>
-                                                    It is a long established fact that a reader will be distracted
-                                                    by the readable content of a page when looking at its layout.
-                                                </p>
-                                                <cite>Tom Cruise</cite>
-                                            </blockquote>
-                                            <p>
-                                                The point of using Lorem Ipsum is that it has a more-or-less
-                                                normal distribution of letters, as opposed to using ‘Content
-                                                here, content here’, making it look like readable English.
-                                            </p>
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use
-                                                Lorem Ipsum as their default model text, and a search for ‘lorem
-                                                ipsum’ will uncover many web sites still in their infancy.
-                                            </p>
-                                            <p>
-                                                Various versions have evolved over the years, sometimes by
-                                                accident, sometimes on purpose (injected humour and the like).
-                                            </p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <p>
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                cupidatat non proident, sunt in culpa qui officia deserunt
-                                                mollit anim id est laborum.
-                                            </p>
+                                            {data?.desc}
                                             <ul className="category">
                                                 <li>
                                                     <span>Tags:</span>

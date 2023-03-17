@@ -123,7 +123,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <span>Email:</span>{" "}
-                      <Link to="#">
+                      <Link to="mailto:jetalsavani55@gmail.com?subject=hello">
                         <span
                           className="__cf_email__"
                           data-cfemail="b4c7d1d9d1dac0d5d8f4d3d9d5ddd89ad7dbd9"
@@ -133,7 +133,7 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <span>Phone:</span> <Link to="#">+91 8200859090</Link>
+                      <span>Phone:</span> <Link to="tel:8200859090">+91 8200859090</Link>
                     </li>
                     <li className="services-list">
                       <Link to="/contact">Contact Our Team</Link>

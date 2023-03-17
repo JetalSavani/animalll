@@ -27,6 +27,7 @@ import Vendor from "./Vendor/Vendor";
 import Disease from "./Disease/Disease";
 import Product from "./Product/Product";
 import Singleblog from "./SingleBlog/SingleBlog";
+import Singleproduct from "./SingleProduct/SingleProduct";
 
 export default function Routers() {
   let pathName = window.location.pathname
@@ -60,7 +61,8 @@ export default function Routers() {
           <Route path="/vendor" element={<Vendor />}></Route>
           <Route path="/disease" element={<Disease />}></Route>
           <Route path="/animalform" element={<Product />}></Route>
-          <Route path="/singleblog" element={<Singleblog />}></Route>
+          <Route path="/singleblog/:id" element={<Singleblog />}></Route>
+          <Route path="/singleproduct/:id" element={<Singleproduct />}></Route>
 
 
 

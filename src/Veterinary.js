@@ -73,7 +73,7 @@ export default function Veterinary() {
           <div className="container">
 
 
-            <div className="section-title with-wrap-style">
+            <div className="section-title with-wrap-style"> <br /> <br />
               <span>OUR Veterinary'S TEAM</span>
 
             </div>
@@ -108,7 +108,14 @@ export default function Veterinary() {
                   </div>
                   <div className="team-content">
                     <h3>MM Cruise</h3>
-                    <span>Professional Trainer</span>
+                    {/* <span>Professional Trainer</span> */}
+                    <h6>
+                      Slot-Timing : 8:00am To 9:00pm
+                    </h6>
+                    <p>
+                      I have exprience of 10 year's in trasportation field.
+                    </p>
+                    <button className='btn btn-success'> Hire Me</button>
                   </div>
                 </div>
               </div>
@@ -141,7 +148,8 @@ export default function Veterinary() {
                   </div>
                   <div className="team-content">
                     <h3>Brad Pitt</h3>
-                    <span>Instructor</span>
+                    {/* <span>Instructor</span> */}
+
                   </div>
                 </div>
               </div>

@@ -5,15 +5,16 @@ export default function Profile() {
 
     let userData = JSON.parse(localStorage.getItem("userData"))
     return (
-        <div> <br />
+        <div className='main-body' > <br />
             <br />
             <style>
                 <>
-                    body{"{"}
-                    margin-top:20px; color: #1a202c; text-align: left; background-color: #e2e8f0;
-                    {"}"}
+                    {/* body{"{"}
+                    margin-top:20px; color: #1a202c; text-align: left; 
+                    {"}"} */}
                     .main-body {"{"}
                     padding: 15px;
+                    background-color: #e2e8f0;
                     {"}"}
                     .card {"{"}
                     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
@@ -48,7 +49,7 @@ export default function Profile() {
 
             </style>
 
-            <div className="container">
+            <div className="container"  >
                 <div className="main-body">
 
                     <div className="row gutters-sm" >

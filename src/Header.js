@@ -416,9 +416,9 @@ export default function Header() {
                                 Change Password
                               </Link>
                             </li>
-                            {userData?.role === "640a11bf7387cfb8e11df200" ? <li className="nav-item">
+                            {userData?.role?.role === "vendor" || userData?.role === "640a11bf7387cfb8e11df200" ? <li className="nav-item">
                               <Link
-                                to="/vendor"
+                                to="/animalform"
                                 className="nav-link"
                               >
                                 Add Product
